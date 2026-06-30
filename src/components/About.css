@@ -1,0 +1,112 @@
+.about-lead {
+  font-size: 17px;
+  color: var(--gray1);
+  font-weight: 600;
+  max-width: 640px;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+/* Role tag chips */
+.about-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 2.5rem;
+}
+.about-role-tag {
+  font-size: 12.5px;
+  font-weight: 500;
+  font-family: var(--mono);
+  padding: 6px 14px;
+  border-radius: var(--r100);
+  border: 1px solid var(--line2);
+  color: var(--teal3);
+  background: rgba(139,92,246,0.08);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.about-role-tag.in { opacity: 1; transform: translateY(0); }
+
+/* Card grids */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.about-grid-2 { grid-template-columns: 1fr; }
+
+.about-card {
+  padding: 1.75rem;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.2s;
+}
+.about-card.in { opacity: 1; transform: translateY(0); }
+.about-card:hover { transform: translateY(-3px); }
+.about-card.in:hover { transform: translateY(-3px); }
+
+.about-card-title {
+  font-size: 12px;
+  font-family: var(--mono);
+  color: var(--teal);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Bio card */
+.about-para {
+  font-size: 15px;
+  color: var(--gray2);
+  line-height: 1.85;
+}
+.about-para + .about-para { margin-top: 1.1rem; }
+
+/* Quick info card */
+.about-info { display: flex; flex-direction: column; gap: 12px; }
+.about-info-row { display: flex; align-items: center; gap: 10px; font-size: 13.5px; }
+.ainfo-bullet {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+.ainfo-label { color: var(--gray3); min-width: 64px; font-family: var(--mono); font-size: 11.5px; }
+.ainfo-value { color: var(--gray1); font-weight: 500; }
+
+/* Certifications card */
+.cert-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+}
+.cert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--r12);
+  transition: border-color 0.15s;
+}
+.cert-item:hover { border-color: rgba(139,92,246,0.35); }
+.cert-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--teal);
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+.cert-name { font-size: 13px; font-weight: 600; line-height: 1.3; margin-bottom: 3px; }
+.cert-meta { font-size: 11px; color: var(--gray3); font-family: var(--mono); }
+
+@media (max-width: 768px) {
+  .about-grid, .about-grid-2 { grid-template-columns: 1fr; gap: 1rem; }
+}
