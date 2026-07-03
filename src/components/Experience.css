@@ -4,28 +4,28 @@
   position: absolute;
   left: 0; top: 10px; bottom: 10px;
   width: 2px;
-  background: linear-gradient(180deg, var(--teal), rgba(139,92,246,0.1));
+  background: linear-gradient(180deg, var(--teal), rgba(139,92,246,0.06));
   border-radius: 2px;
 }
 .tl-item { position: relative; margin-bottom: 2rem; }
 .tl-dot {
   position: absolute;
-  left: -35px; top: 20px;
+  left: -35px; top: 22px;
   width: 12px; height: 12px;
   border-radius: 50%;
   background: var(--teal);
   border: 3px solid var(--bg);
-  box-shadow: 0 0 0 2px var(--teal);
+  box-shadow: 0 0 0 2px var(--teal), 0 0 14px rgba(139,92,246,0.4);
 }
-.tl-item.edu .tl-dot { background: var(--bg); border-color: var(--teal); }
-.tl-card { padding: 1.5rem; border-radius: var(--r16); }
-.tl-top  { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.75rem; align-items: flex-start; }
-.tl-title   { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 3px; }
-.tl-company { font-size: 13px; font-weight: 600; }
-.tl-right   { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
-.tl-period  { font-family: var(--mono); font-size: 12px; color: var(--gray3); background: var(--bg3); padding: 4px 10px; border-radius: 6px; white-space: nowrap; }
+.tl-item.edu .tl-dot { background: var(--bg); border-color: var(--teal); box-shadow: 0 0 0 2px var(--teal); }
+.tl-card { padding: 1.6rem; border-radius: var(--r16); }
+.tl-top  { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.85rem; align-items: flex-start; }
+.tl-title   { font-size: 17px; font-weight: 700; letter-spacing: -0.015em; margin-bottom: 4px; }
+.tl-company { font-size: 13px; font-weight: 600; color: var(--teal3); }
+.tl-right   { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; flex-shrink: 0; }
+.tl-period  { font-family: var(--mono); font-size: 12px; color: var(--gray2); background: var(--bg3); border: 1px solid var(--line); padding: 4px 10px; border-radius: 6px; white-space: nowrap; }
 .tl-location{ font-size: 11px; color: var(--gray3); font-family: var(--mono); }
-.tl-desc    { font-size: 13px; color: var(--gray2); line-height: 1.85; margin-bottom: 1rem; }
+.tl-desc    { font-size: 13.5px; color: var(--gray2); line-height: 1.85; margin-bottom: 1.1rem; }
 .tl-tags    { display: flex; flex-wrap: wrap; gap: 6px; }
 
 @media (max-width: 600px) {

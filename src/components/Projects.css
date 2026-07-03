@@ -4,27 +4,26 @@
   gap: 1.25rem;
 }
 .proj-card {
-  padding: 1.75rem;
+  padding: 1.85rem;
   border-radius: var(--r20);
   display: flex;
   flex-direction: column;
   gap: 0;
   cursor: default;
 }
-.proj-card.hovered { transform: translateY(-4px); }
+.proj-card.hovered { transform: translateY(-5px); box-shadow: var(--shadow-md); }
 
 .pc-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
 }
 .pc-num {
   font-family: var(--mono);
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
-  color: var(--teal);
-  opacity: 0.4;
+  opacity: 0.5;
   line-height: 1;
 }
 .pc-badge {
@@ -32,30 +31,31 @@
   font-family: var(--mono);
   padding: 4px 10px;
   border-radius: 6px;
-  background: rgba(139,92,246,0.1);
+  background: rgba(139,92,246,0.09);
   color: var(--teal3);
   border: 1px solid rgba(139,92,246,0.2);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
 }
 .pc-title {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.75rem;
+  font-family: var(--display);
+  font-size: 18.5px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.8rem;
   line-height: 1.3;
 }
 .pc-desc {
-  font-size: 13px;
+  font-size: 13.5px;
   color: var(--gray2);
   line-height: 1.85;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.15rem;
   flex: 1;
 }
 .pc-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.3rem;
 }
 .pc-links { display: flex; gap: 10px; margin-top: auto; }
 .pc-btn   { font-size: 13px; padding: 9px 18px; }

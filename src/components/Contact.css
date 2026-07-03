@@ -5,23 +5,25 @@
   align-items: start;
 }
 .contact-heading {
-  font-size: clamp(36px, 5vw, 58px);
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  line-height: 1.05;
-  margin-bottom: 1rem;
+  font-family: var(--display);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  margin-bottom: 1.1rem;
 }
 .contact-sub {
   font-size: 15px;
   color: var(--gray2);
   line-height: 1.8;
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
+  max-width: 460px;
 }
 .contact-info {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
 }
 .cinfo-row {
   display: flex;
@@ -30,9 +32,9 @@
   cursor: default;
   text-decoration: none;
   color: inherit;
-  transition: color 0.15s;
+  transition: color 0.2s ease;
 }
-a.cinfo-row:hover .cinfo-val { color: var(--teal); }
+a.cinfo-row:hover .cinfo-val { color: var(--teal3); }
 .cinfo-icon {
   width: 40px; height: 40px;
   border-radius: var(--r8);
@@ -41,11 +43,13 @@ a.cinfo-row:hover .cinfo-val { color: var(--teal); }
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--teal);
+  color: var(--teal3);
   flex-shrink: 0;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
-.cinfo-label { font-family: var(--mono); font-size: 11px; color: var(--gray3); letter-spacing: 0.04em; margin-bottom: 2px; }
-.cinfo-val   { font-size: 14px; font-weight: 500; color: var(--gray1); transition: color 0.15s; }
+a.cinfo-row:hover .cinfo-icon { border-color: rgba(139,92,246,0.4); transform: translateY(-2px); }
+.cinfo-label { font-family: var(--mono); font-size: 11px; color: var(--gray3); letter-spacing: 0.05em; margin-bottom: 2px; }
+.cinfo-val   { font-size: 14px; font-weight: 500; color: var(--gray1); transition: color 0.2s ease; }
 
 .contact-link-btns {
   display: flex;
@@ -54,10 +58,10 @@ a.cinfo-row:hover .cinfo-val { color: var(--teal); }
 }
 
 /* Form */
-.contact-form-wrap { padding: 2rem; border-radius: var(--r16); }
-.contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
-.cf-group { display: flex; flex-direction: column; gap: 6px; }
-.cf-label { font-size: 13px; font-weight: 600; color: var(--gray1); }
+.contact-form-wrap { padding: 2.1rem; border-radius: var(--r16); }
+.contact-form { display: flex; flex-direction: column; gap: 1.3rem; }
+.cf-group { display: flex; flex-direction: column; gap: 7px; }
+.cf-label { font-size: 13px; font-weight: 600; color: var(--gray1); letter-spacing: -0.005em; }
 .cf-input {
   background: var(--bg3);
   border: 1px solid var(--line2);
@@ -66,11 +70,12 @@ a.cinfo-row:hover .cinfo-val { color: var(--teal); }
   font-size: 14px;
   color: var(--white);
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   resize: none;
 }
 .cf-input::placeholder { color: var(--gray3); }
-.cf-input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(139,92,246,0.15); }
+.cf-input:hover { border-color: var(--gray4); }
+.cf-input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(139,92,246,0.16); background: var(--bg4); }
 .cf-textarea { min-height: 130px; }
 .cf-submit {
   width: 100%;
@@ -78,7 +83,7 @@ a.cinfo-row:hover .cinfo-val { color: var(--teal); }
   padding: 14px;
   font-size: 15px;
   border-radius: var(--r8);
-  letter-spacing: 0.02em;
+  letter-spacing: -0.005em;
 }
 
 @media (max-width: 768px) {

@@ -4,23 +4,23 @@
   gap: 1.1rem;
 }
 .skill-group {
-  padding: 1.5rem;
+  padding: 1.6rem;
   border-radius: var(--r16);
 }
 .skill-group-hd {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 1.1rem;
-  padding-bottom: 0.9rem;
+  margin-bottom: 1.15rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid var(--line);
 }
-.sg-icon  { font-size: 18px; }
+.sg-icon  { font-size: 18px; filter: saturate(0.85); }
 .sg-label {
   font-size: 13.5px;
-  font-weight: 700;
-  color: var(--teal);
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: var(--teal3);
+  letter-spacing: -0.005em;
 }
 
 /* Light, scannable chip cloud instead of heavy progress bars */
@@ -32,14 +32,14 @@
 .skill-chip {
   font-size: 12.5px;
   font-weight: 500;
-  padding: 5px 12px;
+  padding: 6px 13px;
   border-radius: var(--r100);
   border: 1px solid var(--line2);
   color: var(--gray2);
   background: transparent;
   opacity: 0;
   transform: translateY(6px);
-  transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.15s, color 0.15s, background 0.15s;
+  transition: opacity 0.45s var(--ease), transform 0.45s var(--ease), border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
 }
 .skill-chip.in { opacity: 1; transform: translateY(0); }
 .skill-chip:hover {

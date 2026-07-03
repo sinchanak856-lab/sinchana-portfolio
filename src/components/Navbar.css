@@ -3,21 +3,26 @@
   top: 0; left: 0; right: 0;
   z-index: 300;
   padding: 0 5%;
-  transition: background 0.25s, border-color 0.25s, backdrop-filter 0.25s;
+  transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
 }
 .navbar.scrolled {
-  background: rgba(12,12,15,0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(10,12,18,0.78);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
   border-bottom: 1px solid var(--line);
+  box-shadow: 0 8px 30px -12px rgba(0,0,0,0.5);
 }
 .nav-inner {
-  max-width: 1100px;
+  max-width: 1180px;
   margin: 0 auto;
-  height: 66px;
+  height: 68px;
   display: flex;
   align-items: center;
   gap: 1.5rem;
+}
+
+@media (min-width: 1440px) {
+  .nav-inner { max-width: 1280px; }
 }
 .nav-logo {
   display: flex;
@@ -30,11 +35,14 @@
   padding: 0;
 }
 .nav-wordmark {
+  font-family: var(--display);
   font-size: 17px;
-  font-weight: 800;
-  letter-spacing: 0.01em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--white);
+  transition: opacity 0.2s ease;
 }
+.nav-logo:hover .nav-wordmark { opacity: 0.82; }
 .nav-wordmark-accent { color: var(--teal); }
 .nav-links {
   display: flex;
@@ -43,26 +51,26 @@
 }
 .nav-link {
   position: relative;
-  padding: 7px 16px;
+  padding: 8px 16px;
   border-radius: var(--r8);
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 500;
   color: var(--gray2);
   background: none;
   border: none;
   cursor: pointer;
-  transition: color 0.15s, background 0.15s;
+  transition: color 0.2s ease, background 0.2s ease;
 }
-.nav-link:hover  { color: var(--white); background: rgba(255,255,255,0.06); }
-.nav-link.active { color: var(--teal); }
+.nav-link:hover  { color: var(--white); background: rgba(255,255,255,0.05); }
+.nav-link.active { color: var(--teal3); }
 .nav-link.active::after {
   content: '';
   position: absolute;
-  left: 16px; right: 16px; bottom: 2px;
+  left: 16px; right: 16px; bottom: 3px;
   height: 2px;
   border-radius: 2px;
   background: var(--teal);
-  animation: navUnderline 0.25s ease both;
+  animation: navUnderline 0.3s var(--ease) both;
 }
 @keyframes navUnderline { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
@@ -90,15 +98,16 @@
   background: var(--white);
   border-radius: 2px;
   display: block;
-  transition: transform 0.2s;
+  transition: transform 0.2s ease;
 }
 
 @media (max-width: 768px) {
   .nav-links {
     display: none;
     position: absolute;
-    top: 66px; left: 0; right: 0;
-    background: var(--bg2);
+    top: 68px; left: 0; right: 0;
+    background: rgba(10,12,18,0.98);
+    backdrop-filter: blur(18px);
     border-bottom: 1px solid var(--line);
     flex-direction: column;
     padding: 1rem 5%;
