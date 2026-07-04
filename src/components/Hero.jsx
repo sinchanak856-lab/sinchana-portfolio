@@ -1,5 +1,5 @@
 import React from 'react';
-import { META } from '../data/portfolioData';
+import { META, RESUME_URL, PHOTO_URL } from '../data/portfolioData';
 import './Hero.css';
 
 const scrollTo = (id) => { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth' }); };
@@ -19,15 +19,16 @@ export default function Hero() {
           </div>
 
           <h1 className="hero-headline reveal" style={{ animationDelay: '.08s' }}>
-            Hi, I&apos;m <span className="hl-accent">Sinchana.</span>
+            Hi, I&apos;m <span className="hl-accent">Sinchana</span>.
             <span className="hl-sub">
-              I build data-driven solutions<span className="hl-accent">&amp;</span> modern web apps.
+              I build practical, data-driven solutions <span className="hl-accent">&amp;</span> modern web applications.
             </span>
           </h1>
+
           <p className="hero-bio reveal" style={{ animationDelay: '.16s' }}>{META.bio}</p>
 
           <div className="hero-cta-row reveal" style={{ animationDelay: '.24s' }}>
-            <a className="btn btn-teal hero-btn-primary" href="/Sinchana_KK_Resume.pdf" download>
+            <a className="btn btn-teal hero-btn-primary" href={RESUME_URL} download="Sinchana_KK_Resume.pdf">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Download Resume
             </a>
@@ -65,7 +66,7 @@ export default function Hero() {
             <div className="hero-photo-stage">
               <div className="hero-photo-blob" aria-hidden="true" />
               <div className="hero-photo-frame">
-                <img src="/sinchana.jpg" alt="Sinchana K K" className="hero-photo-img" />
+                <img src={PHOTO_URL} alt="Sinchana K K" className="hero-photo-img" />
               </div>
             </div>
             <div className="hero-photo-divider" />

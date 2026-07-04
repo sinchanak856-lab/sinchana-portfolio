@@ -3,6 +3,12 @@
 //  Edit this file to update all content across the site
 // ============================================================
 
+// Public asset paths — built with PUBLIC_URL so they resolve correctly
+// whether the site is hosted at a domain root (Vercel/Netlify) or a
+// GitHub Pages project subpath (username.github.io/repo-name).
+export const RESUME_URL = `${process.env.PUBLIC_URL}/Sinchana_KK_Resume.pdf`;
+export const PHOTO_URL  = `${process.env.PUBLIC_URL}/sinchana.jpg`;
+
 export const META = {
   name:           'SINCHANA K K',
   initials:       'SK',
